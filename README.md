@@ -1,0 +1,2 @@
+# finder
+### a Sails application
