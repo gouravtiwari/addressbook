@@ -20,7 +20,9 @@
       as you would normally: using <link/> tags.
       
     -->
-
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/cover.css">
     <!--
 
       Support for LESS included by default
@@ -36,10 +38,9 @@
   </head>
 
   <body>
-
+    
     <!-- Include the view file for the current controller/route -->
     <%- body %>
-
 
     <!--
 
@@ -55,10 +56,11 @@
     <script type="text/javascript" src="/js/socket.io.js"></script>
     <!-- then beef it up with some convenience logic for talking to Sails.js -->
     <script type="text/javascript" src="/js/sails.io.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <!-- listen on socket.io for incoming messages -->
     <script type="text/javascript" src="/js/app.js"></script>
-
-    <!-- Your scripts here? -->
+    <script type="text/javascript" src="/js/custom.js"></script>
     <!-- Your scripts here? -->
     <!-- Your scripts here? -->
 

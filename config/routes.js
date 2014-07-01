@@ -33,7 +33,7 @@ module.exports.routes = {
   // 
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': {
-    view: 'addressbook/search'
+    view: 'addressbook/index'
   },
 
   'get /addressbook/search': 'AddressbookController.search'
