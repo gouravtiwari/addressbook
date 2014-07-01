@@ -25,9 +25,9 @@ module.exports = {
    search: function (req, res) {
       // Send a JSON response
       var criteria = req.param('criteria');
-      AddressBook.find({name: {contains: criteria}},function(e,s) {
-        if (e) console.error(e);
-        return res.json(s);
+      AddressBook.getSearchResults(criteria, function(errors, results){
+        if (errors) console.error(errors);
+        return res.json(results);  
       });
     },
 

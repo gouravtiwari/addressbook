@@ -16,5 +16,23 @@ module.exports = {
     name:     'string',
     address:  'string',
     phone:    'string'
+  },
+
+  getSearchResults: function(criteria, callback){
+    var results;
+    var errors;
+    AddressBook.find()
+               .where({
+                or: [
+                    {'name':    {contains: criteria}},
+                    {'address': {contains: criteria}},
+                    {'phone':   {contains: criteria}}
+                  ]
+                })
+               .exec(function(e,r) {
+                  errors = e;
+                  results = r;
+                });
+    callback(errors, results);
   }
 };
